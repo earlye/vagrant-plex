@@ -1,0 +1,13 @@
+server {
+
+        server_name plex.lan;
+
+	location = / {
+	   return 301 $scheme://plex.lan:32400/web/ ;
+	}
+
+	location / { 
+		 return 301 $scheme://plex.lan:32400$request_uri ;
+	}
+
+}
